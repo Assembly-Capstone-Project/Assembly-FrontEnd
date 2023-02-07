@@ -1,0 +1,56 @@
+.playing, .online {
+  height: 200px;
+  width: 400px;
+  border: 5px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+}
+.btns-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  align-items: center;
+}
+.Carousel-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Carousel{
+  /* display: flex; */
+  /* justify-content: center; */
+  width: 500px;
+  height: 256px;
+}
+
+.btns{
+width: 100px;
+}
+
+.blue{
+  background-color: blue;
+}
+.green{
+  background-color: green;
+}
+
+.status-circle {
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border-radius: 100%;
+}
+
+.status-text {
+  display: flex;
+  align-items: center;
+}
