@@ -6,13 +6,27 @@ import { Link } from "react-router-dom";
 //import { Container } from "react-bootstrap/lib/Tab";
 // import AssemblyLogo from "../Image/AssemblyLogo.png";
 import Button from "react-bootstrap/esm/Button";
-import Navy from "../components/Navbar";
 function LandingPage() {
   return (
     <>
-      <Navy />
       <div className="Carousel-wrapper" >
         <Carousel className="Carousel" fade>
+
+
+        <Carousel.Item className="Carousel">
+            <img
+              className="d-block w-100"
+              src="images/assembly-logo.png"
+              alt="First slide"
+            />
+            <Carousel.Caption  >
+              <h3>Connect with friends</h3>
+              <p >Improve your gaming experience</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+
+
           <Carousel.Item className="Carousel">
             <img
               className="d-block w-100"
@@ -59,27 +73,27 @@ function LandingPage() {
 
       <div className="btns-wrapper">
       <Link to="/signUpPage">
-        <Button variant="light"className="btns">Sign Up</Button>
+        <Button style={{ fontSize: 20 }} variant="light"className="btns">Sign Up</Button>
  </Link>
  <Link to="/LoginPage">
-        <Button variant="light"className="btns">Login</Button>
+        <Button style={{ fontSize: 24 }}  variant="light"className="btns">Login</Button>
         </Link>  
       </div>
       <div className="status-box">
         <div className="playing">
           <div className="status-text">
-            <div>Playing now</div>
-            <div className="status-circle green"></div>
+            <div style={{ fontSize: 30 }} >Playing now</div>
+            <div style={{height: 20 , width:  20}} className="status-circle green"></div>
           </div>
-          <div>3,534,646</div>
+          <div style={{ fontSize: 35 }} >3,534,646</div>
         </div>
 
         <div className="online">
           <div className="status-text">
-            <div>Online now</div>
-            <div className="status-circle blue"></div>
+            <div style={{ fontSize: 30 }} >Online now</div>
+            <div style={{height: 20 , width:  20}} className="status-circle blue"></div>
           </div>
-          <div>7,049,155</div>
+          <div style={{ fontSize: 35 }} >7,049,155</div>
         </div>
       </div>
     </>
