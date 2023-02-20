@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+// import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Form from "react-bootstrap/Form";
 // import Button from "react-bootstrap/esm/Button";
 // import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-// import Context from "../Context/Context";
+import Context from "../Context/Context";
 
 function SignUpPage() {
   let navigate = useNavigate();
@@ -13,30 +13,35 @@ function SignUpPage() {
   let [username, setUsername] = useState("");
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
+  const {user, setUser} = useContext(Context)
 
-  function submitForm() {
-    console.log("submitting sign up form");
-    fetch("http://localhost:8000/users/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ 
-        username: username,
-        password: password,
-          email: email
-          }),
+  const submitForm = async () => {
+    try {
+      const result = await fetch("http://localhost:8000/users/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+          email,
+        }),
+      });
+      const json = await result.json();
+      const verifiedUser = {user: json.user.username, token: json.token, userId: json.user.id}
+      window.localStorage.setItem('assembly-token', JSON.stringify(verifiedUser))
+      setUser(json.user)
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-    })
-    };
-
-
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        submitForm()
-        navigate('/LoginPage')
-      }
-  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    submitForm();
+    navigate("/LoginPage");
+  };
 
   return (
     <div>
@@ -72,4 +77,3 @@ function SignUpPage() {
 }
 
 export default SignUpPage;
-<Link to="/HomePage"></Link>;

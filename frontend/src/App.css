@@ -1,8 +1,23 @@
 .App {
   text-align: center;
-  background-color: #131030;
+  background-image: url('../public/images/background-img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   left: 0;
   right: 0;
-  height:100vh;
+  height:100%;
+  /* padding: 80px; */
+}
+
+@media only screen and (max-width: 768px) {
+    .App {
+        height: unset;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .App {
+        padding: 40px; 
+    }
 }

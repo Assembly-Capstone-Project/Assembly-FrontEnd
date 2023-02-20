@@ -1,25 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background: rgb(63, 161, 251);
+  background: linear-gradient(
+    142deg,
+    rgba(63, 161, 251, 1) 0%,
+    rgba(252, 70, 168, 1) 100%
+  );
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 4rem);
+}
+
+.title-wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  transform: skew(0, -10deg);
+}
+
+.top-title {
+  order: 1;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.bottom-title {
+  order: 3;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  margin-top: 2rem;
+  padding-left: 2rem;
+}
+
+.sweet-title {
+  order: 2;
+  color: #fde9ff;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 0.75em;
+  text-align: center;
+  text-shadow: 3px 1px 1px #a716fb, 2px 2px 1px #165bfb, 4px 2px 1px #a716fb,
+    3px 3px 1px #165bfb, 5px 3px 1px #a716fb, 4px 4px 1px #165bfb,
+    6px 4px 1px #a716fb, 5px 5px 1px #165bfb, 7px 5px 1px #a716fb,
+    6px 6px 1px #165bfb, 8px 6px 1px #a716fb, 7px 7px 1px #165bfb,
+    9px 7px 1px #a716fb;
+}
+
+.title-line {
+  width: 90%;
+}
+
+.sweet-title span {
+  display: block;
+  position: relative;
+  
+}
+
+.sweet-title span:before {
+  content: attr(data-text);
+  position: absolute;
+  text-shadow: 2px 2px 1px #e94aa1, -1px -1px 1px #c736f9,
+    -2px 2px 1px #e94aa1, 1px -1px 1px #f736f9;
+  z-index: 1;
+}
+.sweet-title span:nth-child(1) {
+  padding-right: 2.25rem;
+}
+.sweet-title span:nth-child(2) {
+  padding-left: 2.25rem;
+}
+
+
 .playing, .online {
   height: 200px;
   width: 400px;
-  border: 3px solid black;
-  background-color: cornsilk;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 5px;
 }
 
 .status-box {
   display: flex;
   width: 100%;
-  justify-content: space-around;
-
+  margin-top: 70px;
 }
 .btns-wrapper{
   display: flex;
   justify-content: center;
   flex-direction: column; 
   align-items: center;
+}
+
+.right-side {
+  width: 800px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 50px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #957dad,
+               1px 2px 0px #957dad,
+               1px 3px 0px #957dad,
+               1px 4px 0px #957dad,
+               1px 5px 0px #957dad,
+               1px 6px 0px #957dad,
+               1px 10px 5px rgba(16, 16, 16, 0.5),
+               1px 15px 10px rgba(16, 16, 16, 0.4),
+               1px 20px 30px rgba(16, 16, 16, 0.3),
+               1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+.btns-inner-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 45px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-color: white;
+  width: 60%;
 }
 .Carousel-wrapper{
   display: flex;
@@ -30,18 +158,16 @@
 .Carousel{
   /* display: flex; */
   /* justify-content: center; */
-  width: 700px;
-  border: 3px solid black;
+  width: 100%;
   height: 356px;
   
 }
 
 .btns{
   border: 2px solid black;
-width: 100px;
-margin-top: 15px;
-margin-bottom: 15px;
-
+  width: 200px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .blue{
@@ -61,4 +187,41 @@ margin-bottom: 15px;
 .status-text {
   display: flex;
   align-items: center;
+}
+
+.landing-hero {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 100px;
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .landing-hero {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  .right-side{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .btns {
+    width: 100%;
+  }
+  .btns-inner-container {
+    width: 100%;
+  }
+  .status-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .playing, .online {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }

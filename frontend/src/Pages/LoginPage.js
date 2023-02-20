@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
+import Context from '../Context/Context';
 
 function LoginPage() {
+  const {user} = useContext(Context)
   return (
     <div>
      <Form>
+      {user && <h1>{user.username}</h1>}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
