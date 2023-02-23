@@ -2,9 +2,6 @@ import React, { useEffect, useState, useLayoutEffect } from "react";
 import "./landingPage.css";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
-//import Button from "react-bootstrap/esm/Button";
-//import { Container } from "react-bootstrap/lib/Tab";
-// import AssemblyLogo from "../Image/AssemblyLogo.png";
 import Button from "react-bootstrap/esm/Button";
 
 function useWindowSize() {
@@ -20,7 +17,7 @@ function useWindowSize() {
   return width;
 }
 
-function LandingPage() {
+function LandingPage({user}) {
   const width = useWindowSize();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 

@@ -1,0 +1,33 @@
+#postContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left:100px;
+}
+
+#postContainer button {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  height: 50px;
+  width: 70px;
+  margin-top: 80px;
+  font-size: 16px;
+  /* margin: 5px; */
+  font-weight: 500;
+  padding: 0 0.3rem;
+  /* text-align: center; */
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#header {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#tags {
+  margin-top: 80px;
+}

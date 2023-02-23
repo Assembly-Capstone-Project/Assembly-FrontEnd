@@ -1,23 +1,23 @@
-.App {
+body {
   text-align: center;
   background-image: url('../public/images/background-img.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   position: absolute;
   left: 0;
   right: 0;
   height:100%;
-  /* padding: 80px; */
 }
 
 @media only screen and (max-width: 768px) {
-    .App {
+    body {
         height: unset;
     }
 }
 
 @media only screen and (max-width: 425px) {
-    .App {
+    body {
         padding: 40px; 
     }
 }

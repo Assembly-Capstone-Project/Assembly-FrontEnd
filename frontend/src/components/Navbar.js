@@ -1,11 +1,19 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from 'react-bootstrap/Nav';
 import "./navbar.css";
 import Context from "../Context/Context";
 function Navy() {
-  const {user} = useContext(Context)
+  const { user, setUser } = useContext(Context)
+  const navigate = useNavigate()
+  
+  const logout = () => {
+    localStorage.removeItem('assembly-token')
+    setUser(null)
+    navigate('/')
+  }
   return (
     <div id="parent">
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -26,12 +34,12 @@ function Navy() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
             </Nav>
-            <p>Username</p>
+            <p>{user?.username}</p>
             <Nav>
-              <Nav.Link href="/games">Games</Nav.Link>
+              <Nav.Link href="/gamesPage">Games</Nav.Link>
               <Nav.Link href="#pricing">Friends</Nav.Link>
               <Nav.Link href="#deets">Favorites</Nav.Link>
-              <Nav.Link  href="#memes"> Log Out </Nav.Link>
+              <Nav.Link onClick={logout} href="#memes"> Log Out </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

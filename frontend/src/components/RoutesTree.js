@@ -14,7 +14,7 @@ function RoutesTree() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/" element={<LandingPage />}/>
         <Route path="/SignUpPage" element={<SignUpPage/>}/>
         <Route path="/LoginPage" element={<LoginPage/>}/>
         <Route path="/HomePage" element={<HomePage/>}/>

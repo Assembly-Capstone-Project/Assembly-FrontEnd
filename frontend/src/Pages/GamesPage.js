@@ -1,42 +1,51 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import "./gamesPage.css";
 
 function GamesPage() {
-  const { token } = JSON.parse(window.localStorage.getItem('assembly-token'))
-  const [games, setGames] = useState([])
+  let token;
+  if (window.localStorage.getItem("assembly-token")) {
+    token = JSON.parse(window.localStorage.getItem("assembly-token")).token;
+  }
+  const [games, setGames] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const fetchGames = async () => {
     //dont need body because its a get request
-    const result = await fetch("http://localhost:8000/games", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    const json = await result.json()
-    setGames(json)
-
-  }
+    if (token) {
+      const result = await fetch("http://localhost:8000/games", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const json = await result.json();
+      setGames(json);
+    } else {
+      setErrorMessage(
+        <h1 style={{ color: "white" }}>You're Not Signed In.</h1>
+      );
+    }
+  };
   useEffect(() => {
-    fetchGames()
-  }, [])
-
-  useEffect(() => {
-    
-    console.log(games)
-  }, [games])
+    fetchGames();
+  }, []);
 
   return (
     <div>
-      <h1>Game Page</h1>
-      <p>Welcome to the gamingPage</p>
-
-      {games?.map((game) => (
-        <div>
-          <h3>{game.name}</h3>
-          <h4>{game.platform}</h4>
-          <p>{game.rating}</p>
-        </div>
-      ))}
+      <h1 style={{ color: "white" }}>Game Page</h1>
+      <p style={{ color: "white" }}> Welcome to the gamingPage</p>
+      {errorMessage && <div>{errorMessage}</div>}
+      {!errorMessage &&
+        games?.map((game) => (
+          <div style={{ color: "white" }}>
+            <h3>{game.name}</h3>
+            <h4>{game.platform}</h4>
+            <p>{game.rating}</p>
+            <div id="gameContainer">
+              <img src={game.url}></img>
+            </div>
+          </div>
+        ))}
     </div>
   );
 }

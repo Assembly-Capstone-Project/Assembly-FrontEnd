@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Context from "../Context/Context";
+import "./signUpPage.css";
 
 function SignUpPage() {
   let navigate = useNavigate();
@@ -13,7 +14,7 @@ function SignUpPage() {
   let [username, setUsername] = useState("");
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
-  const {user, setUser} = useContext(Context)
+  const { setUser } = useContext(Context);
 
   const submitForm = async () => {
     try {
@@ -29,9 +30,16 @@ function SignUpPage() {
         }),
       });
       const json = await result.json();
-      const verifiedUser = {user: json.user.username, token: json.token, userId: json.user.id}
-      window.localStorage.setItem('assembly-token', JSON.stringify(verifiedUser))
-      setUser(json.user)
+      const verifiedUser = {
+        username: json.user.username,
+        token: json.token,
+        id: json.user.id,
+      };
+      window.localStorage.setItem(
+        "assembly-token",
+        JSON.stringify(verifiedUser)
+      );
+      setUser(json.user);
     } catch (err) {
       console.log(err);
     }
@@ -45,33 +53,42 @@ function SignUpPage() {
 
   return (
     <div>
-      <form onSubmit={submitForm}>
-        <input
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          type="username"
-          required
-          placeholder="username"
-        />
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          required
-          placeholder="Email"
-        />
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          required
-          placeholder="Password"
-          className="text-black border border-gray-400 py-1 px-2 w-full rounded-xl mx-auto"
-        />
-        <button onClick={handleSubmit}>
-          <div class="text ">Login</div>
-        </button>
-      </form>
+      <div id="body">
+        <form onSubmit={submitForm}>
+          <div className="inputBox">
+            <input
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              type="username"
+              required
+            />
+            <span>Username</span>
+          </div>
+          <div className="inputBox">
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              required
+              placeholder=""
+            />
+            <span>Email</span>
+          </div>
+          <div className="inputBox">
+            <input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              required
+              placeholder=""
+            />
+            <span>Password</span>
+          </div>
+          <button id="signupbtn" onClick={handleSubmit}>
+            <div class="text">Login</div>
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
