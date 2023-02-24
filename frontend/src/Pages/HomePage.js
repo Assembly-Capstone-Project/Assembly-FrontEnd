@@ -1,5 +1,6 @@
 import React from "react";
 import Navy from "../components/Navbar";
+import NewNavBar from "../components/NewNavBar";
 import FriendsActivity from "../components/FriendsActivity";
 import AsemilitesActivity from "../components/AsemilitesActivity";
 import SearchPost from "../components/SearchPost";
@@ -8,7 +9,8 @@ import "./homePage.css";
 function HomePage() {
   return (
     <div> 
-      <Navy />
+      <NewNavBar/>
+      {/* <Navy /> */}
       <FriendsActivity />
       <AsemilitesActivity/>
       <SearchPost/>

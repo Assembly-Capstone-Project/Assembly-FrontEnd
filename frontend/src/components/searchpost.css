@@ -11,17 +11,28 @@ h2 {
   margin: 10px;
   font-size: 40px;
   /* color: rgb(1, 1, 59); */
-  color: pink;
+  color: black;
+  font-family: "Trebuchet MS", "sans-serif"
 }
 
 .search {
   width: 30%;
-  border: 3px solid pink;
+  border: 5px solid black;
+  color:#673fd7;
 }
 
 ul li {
   font-size: 20px;
-  font-weight: bold;
-  color: pink;
+  font-family: "Impact", "fantasy";
+  color: #5643cc;
   list-style-type: none;
+  background-color: white;
+  border-radius: 15px;
+  margin: 5px;
+  /* opacity: 0.5; */
 }
+ul li:hover {
+  background-image: url('https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg');
+  border-radius: 20px;
+}
+

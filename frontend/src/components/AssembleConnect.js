@@ -57,27 +57,33 @@ function AssembleConnect() {
       {posts.map((post) => (
         <div key={post.id} id="postparent">
           <div id="header">
-            <h2>
+            <h2 id="postHeader">
               {post.username} is Assembling players for {post.name}
             </h2>
-          </div>
           <div id="postContainer">
+            <img
+              src="https://www.pngall.com/wp-content/uploads/5/Video-Game-Controller-PNG-Picture.png"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+              />
             <button>connect</button>
+            <button onClick={()=> deletePost(post.id)} >delete</button>
             <img
               className="img-item"
               src={[post.url[0]]}
               alt="Elden ring"
             ></img>
             <div id="tags">
-              <ul>
-                <li>
-                  <button onClick={()=> deletePost(post.id)} >delete</button>
-                </li>
-                <li>{post.name}</li>
-                <li>{post.rating}</li>
-                <li>{post.platform}</li>
+              <ul id="taglist">
+                {/* <h4>Title:</h4> */}
+                <li>Title: {post.name}</li>
+                {/* <h4>Rating:</h4> */}
+                <li>Rating: {post.rating}</li>
+                {/* <h4>Platform:</h4> */}
+                <li>Platform: {post.platform}</li>
               </ul>
             </div>
+          </div>
           </div>
         </div>
       ))}

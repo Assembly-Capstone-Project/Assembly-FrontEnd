@@ -4,7 +4,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 110;
-    /* background-image: url('/public/images/background-img.png'); */
+    /* background-image: url('https://wallpapercave.com/wp/wp8144315.jpg'); */
     /* border: 2px solid green */
 }
 .img-item{
@@ -12,7 +12,7 @@
     width: 370px;
     margin: 10px;
     border-radius: 20px;
-    border: 3px solid pink;
+    border: 3px solid black
 }
 
 #platform-box{
@@ -36,4 +36,15 @@
     color: aliceblue;
     margin-bottom: 30px;
     /* border: 2px solid black */
+}
+
+@media only screen and (min-width: 1560px) {
+    .img-item{
+        height: 250px;
+        width: 290px;
+        margin: 10px;
+        border-radius: 20px;
+        border: 3px solid black
+
+    }
 }

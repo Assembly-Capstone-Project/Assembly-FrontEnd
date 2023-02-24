@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import NewNavBar from "../components/NewNavBar";
 import "./gamesPage.css";
 
 function GamesPage() {
@@ -32,8 +33,7 @@ function GamesPage() {
 
   return (
     <div>
-      <h1 style={{ color: "white" }}>Game Page</h1>
-      <p style={{ color: "white" }}> Welcome to the gamingPage</p>
+      <NewNavBar/>
       {errorMessage && <div>{errorMessage}</div>}
       {!errorMessage &&
         games?.map((game) => (
