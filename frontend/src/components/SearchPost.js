@@ -11,9 +11,6 @@ function SearchPost() {
     var lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
   };
-  // make button here
-  // handle sumbit here
-
 
   return (
     <div className="main">

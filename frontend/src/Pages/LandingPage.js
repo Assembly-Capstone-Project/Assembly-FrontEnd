@@ -42,7 +42,7 @@ function LandingPage({user}) {
         <div className="btns-wrapper"></div>
         <div className="btns-inner-container">
           <Link to="/signUpPage">
-            <Button style={{ fontSize: 24 }} variant="dark" className="btns">
+            <Button style={{ fontSize: 24}}  variant="dark" className="btns">
               Sign Up
             </Button>
           </Link>
@@ -94,24 +94,24 @@ function LandingPage({user}) {
         <div className="status-box">
           <div className="playing">
             <div className="status-text">
-              <div style={{ fontSize: 30 }}>Playing now</div>
+              <div style={{ fontSize: 30 , color: 'white' } }  >Playing now</div>
               <div
                 style={{ height: 20, width: 20 }}
                 className="status-circle green"
               ></div>
             </div>
-            <div style={{ fontSize: 35 }}>3,534,646</div>
+            <div style={{ fontSize: 35, color: 'white'  }}>3,534,646</div>
           </div>
 
           <div className="online">
             <div className="status-text">
-              <div style={{ fontSize: 30 }}>Online now</div>
+              <div style={{ fontSize: 30  , color: 'white' }}>Online now</div>
               <div
                 style={{ height: 20, width: 20 }}
                 className="status-circle blue"
               ></div>
             </div>
-            <div style={{ fontSize: 35 }}>7,049,155</div>
+            <div style={{ fontSize: 35 , color: 'white'  }}>7,049,155</div>
           </div>
         </div>
       </div>

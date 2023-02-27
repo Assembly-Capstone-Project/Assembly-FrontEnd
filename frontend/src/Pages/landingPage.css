@@ -90,7 +90,10 @@ body {
 .playing, .online {
   height: 200px;
   width: 400px;
-  background-color: white;
+  /* background-color: white; */
+  background-image: url('https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg');
+  border: 5px solid black;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,6 +115,7 @@ body {
 
 .right-side {
   width: 800px;
+  margin-right: 90px;
 }
 
 .left-side {
@@ -142,18 +146,22 @@ body {
 .btns-inner-container {
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 45px;
   padding-top: 55px;
   padding-bottom: 55px;
-  background-color: white;
+  /* background-color: white; */
+  /* background-image: url(https://i.pinimg.com/736x/98/2d/aa/982daa7….jpg); */
+  background-image: url('https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg');
+  border: 5px solid black;
   width: 60%;
+  height: 300px;
 }
 .Carousel-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  /* margin-top: px; */
 }
 .Carousel{
   /* display: flex; */
@@ -162,7 +170,10 @@ body {
   height: 356px;
   
 }
+.Carousel img{
+  border:6px solid black;
 
+}
 .btns{
   border: 2px solid black;
   width: 200px;
@@ -190,7 +201,7 @@ body {
 }
 
 .landing-hero {
-  margin-top: 200px;
+  margin-top: 60px;
   display: flex;
   justify-content: space-evenly;
   padding-top: 100px;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NewNavBar from "../components/NewNavBar";
+import ResNavbar from "../components/ResponsiveNavBar";
 import "./gamesPage.css";
 
 function GamesPage() {
@@ -33,7 +34,8 @@ function GamesPage() {
 
   return (
     <div>
-      <NewNavBar/>
+      {/* <NewNavBar/> */}
+      <ResNavbar/>
       {errorMessage && <div>{errorMessage}</div>}
       {!errorMessage &&
         games?.map((game) => (

@@ -7,7 +7,8 @@ body{
 }
 
 .nav{
-    background-color: black;
+    /* background-color: black; */
+    background-image: url('https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg');
     color: white;
     display: flex;
     justify-content: space-between;
@@ -37,6 +38,7 @@ body{
     display: flex;
     align-items: center;
     padding: .25rem;
+    
 }
 
 .nav li:hover{

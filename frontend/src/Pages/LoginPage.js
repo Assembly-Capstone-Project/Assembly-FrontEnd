@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 import Context from "../Context/Context";
 import { useNavigate } from "react-router-dom";
-
+import "./signUpPage.css";
 function LoginPage() {
-  const { user, setUser } = useContext(Context);
+  const { setUser } = useContext(Context);
   let [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorText, setErrorText] = useState("");
@@ -40,43 +40,44 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(username && password) {
-      sendCredentials(username, password)
+    if (username && password) {
+      sendCredentials(username, password);
     } else {
-      setErrorText("Please enter a valid information")
+      setErrorText("Please enter a valid information");
     }
-  }
+  };
 
   return (
     <div>
-        {user && <h1>{user.username}</h1>}
-        <div id="body">
-        <form onSubmit={handleSubmit}>
-          <div className="inputBox">
-            <input
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              type="username"
-              required
-            />
-            <span>Username</span>
-          </div>
-          
-          <div className="inputBox">
-            <input
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              required
-              placeholder=""
-            />
-            <span>Password</span>
-          </div>
-          
-        </form>
-      <button onClick={handleSubmit}>
-            <div class="text ">Login</div>
+      {/* {user && <h1>{user.username}</h1>} */}
+      <div id="body">
+        <div className="loginbackground">
+          <form onSubmit={handleSubmit}>
+            <div className="inputBox">
+              <input
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                type="username"
+                required
+              />
+              <span>Username</span>
+            </div>
+
+            <div className="inputBox">
+              <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                required
+                placeholder=""
+              />
+              <span>Password</span>
+            </div>
+          <button id="signupbtn" onClick={handleSubmit}>
+            <div class="text">Login</div>
           </button>
+          </form>
+        </div>
       </div>
     </div>
   );

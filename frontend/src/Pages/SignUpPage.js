@@ -54,40 +54,42 @@ function SignUpPage() {
   return (
     <div>
       <div id="body">
-        <form onSubmit={submitForm}>
-          <div className="inputBox">
-            <input
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              type="username"
-              required
-            />
-            <span>Username</span>
-          </div>
-          <div className="inputBox">
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              required
-              placeholder=""
-            />
-            <span>Email</span>
-          </div>
-          <div className="inputBox">
-            <input
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              required
-              placeholder=""
-            />
-            <span>Password</span>
-          </div>
-          <button id="signupbtn" onClick={handleSubmit}>
-            <div class="text">Login</div>
-          </button>
-        </form>
+        <div className="formbackground">
+          <form onSubmit={submitForm}>
+            <div className="inputBox">
+              <input
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                type="username"
+                required
+              />
+              <span>Username</span>
+            </div>
+            <div className="inputBox">
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                required
+                placeholder=""
+              />
+              <span>Email</span>
+            </div>
+            <div className="inputBox">
+              <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                required
+                placeholder=""
+              />
+              <span>Password</span>
+            </div>
+            <button id="signupbtn" onClick={handleSubmit}>
+              <div class="text">Login</div>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

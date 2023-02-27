@@ -1,5 +1,4 @@
 #signupForm{
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,10 +17,11 @@
   justify-content: center;
   align-items: center;
   /* position of form  */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   flex-direction: column;
   gap: 30px;
   background-image: url('/public/images/background-img.png');
+  border-radius: 8px;
   background-repeat: repeat;
   background-size: cover;
   position: absolute;
@@ -32,6 +32,12 @@
 .inputBox{
   position: relative;
   width: 250px;
+  height: 80px;
+  margin-top: 30px;
+  /* background-color: #00dfc4; */
+  /* background-image: url('https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg'); */
+  /* border: 2px solid black; */
+  border-radius: 8px;
 }
 .inputBox input{
   width: 100%;
@@ -57,13 +63,14 @@
 /* color of text  */
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span{
-  color: #5643CC;
+  color: palevioletred;
   transform: translateX(10px) translateY(-7px);
-  font-size: 0.65em;
+  /* font-size: 0.65em; */
+  font-size: 13px;
   padding: 0 10px;
   background: #1d2b3a;
-  border-left: 1px solid #00dfc4;
-  border-right: 1px solid #00dfc4;
+  border-left: 2px solid palevioletred;
+  border-right: 2px solid palevioletred;
   letter-spacing: 0.2em;
 }
 .inputBox input:valid,
@@ -102,6 +109,23 @@ span{
 #signupbtn:hover {
   box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
   transition-duration: .1s;
+}
+
+.formbackground{
+  border-radius: 8px;
+  background-image: url('https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg');
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.loginbackground{
+  background-image: url('https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg');
+  border-radius: 8px;
+  width: 300px;
+  /* height: 400px; */
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
