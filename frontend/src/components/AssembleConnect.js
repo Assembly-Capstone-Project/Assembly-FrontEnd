@@ -63,7 +63,7 @@ function AssembleConnect() {
           <div id="postContainer">
             <img
               src="https://www.pngall.com/wp-content/uploads/5/Video-Game-Controller-PNG-Picture.png"
-              className="d-inline-block align-top"
+              className="logoCon"
               alt="React Bootstrap logo"
               />
             <button>connect</button>
