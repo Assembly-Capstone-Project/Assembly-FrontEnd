@@ -1,6 +1,6 @@
 import { React, useEffect, useState, useContext } from "react";
 import Context from '../Context/Context'
-
+import APIURL from '../apiEndpoint'
 function List(props) {
   let token;
   if (window.localStorage.getItem("assembly-token")) {
@@ -17,7 +17,7 @@ function List(props) {
     }
     //dont need body because its a get request
     if (token) {
-      const request = await fetch("http://localhost:8000/posts", {
+      const request = await fetch(`${APIURL}/posts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ function List(props) {
   const fetchGames = async () => {
     //dont need body because its a get request
     if (token) {
-      const result = await fetch("http://localhost:8000/games", {
+      const result = await fetch(`${APIURL}/games`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

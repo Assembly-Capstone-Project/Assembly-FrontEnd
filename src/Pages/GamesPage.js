@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import NewNavBar from "../components/NewNavBar";
 import ResNavbar from "../components/ResponsiveNavBar";
+import APIURL from "../apiEndpoint";
 import "./gamesPage.css";
 
 function GamesPage() {
@@ -14,7 +14,7 @@ function GamesPage() {
   const fetchGames = async () => {
     //dont need body because its a get request
     if (token) {
-      const result = await fetch("http://localhost:8000/games", {
+      const result = await fetch(`${APIURL}/games`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -44,7 +44,7 @@ function GamesPage() {
             <h4>{game.platform}</h4>
             <p>{game.rating}</p>
             <div id="gameContainer">
-              <img src={game.url}></img>
+              <img src={game.url} alt="a video game"></img>
             </div>
           </div>
         ))}

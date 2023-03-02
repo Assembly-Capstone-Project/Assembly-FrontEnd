@@ -1,9 +1,13 @@
 import React, { useEffect, useContext, useState } from "react";
 import Context from "../Context/Context";
+import APIURL from "../apiEndpoint";
 import "./assembleConnect.css";
+
+
+
 function AssembleConnect() {
   const { posts, setPosts } = useContext(Context);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [ setErrorMessage] = useState("");
   // console.log(posts)
   const fetchPosts = async () => {
     let token;
@@ -11,7 +15,7 @@ function AssembleConnect() {
       token = JSON.parse(window.localStorage.getItem("assembly-token")).token;
     }
     if (token) {
-      const result = await fetch("http://localhost:8000/posts", {
+      const result = await fetch(`${APIURL}/posts`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -35,7 +39,7 @@ function AssembleConnect() {
       token = JSON.parse(window.localStorage.getItem("assembly-token")).token;
     }
     if (token) {
-      const result = await fetch("http://localhost:8000/posts", {
+      const result = await fetch(`${APIURL}/posts`, {
         method: "DELETE",
         headers: {
          "Content-Type": "application/json",
@@ -77,11 +81,8 @@ function AssembleConnect() {
             ></img>
             <div id="tags">
               <ul id="taglist">
-                {/* <h4>Title:</h4> */}
                 <li>Title: {post.name}</li>
-                {/* <h4>Rating:</h4> */}
                 <li>Rating: {post.rating}</li>
-                {/* <h4>Platform:</h4> */}
                 <li>Platform: {post.platform}</li>
               </ul>
             </div>
@@ -95,10 +96,3 @@ function AssembleConnect() {
 
 export default AssembleConnect;
 
-{
-  /* <img
-    className="img-item"
-    src="https://e0.pxfuel.com/wallpapers/935/796/desktop-wallpaper-elden-ring-eldenring.jpg"
-    alt="Elden ring"
-  ></img> */
-}

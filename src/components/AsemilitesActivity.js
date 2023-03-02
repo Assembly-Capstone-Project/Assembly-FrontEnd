@@ -1,5 +1,6 @@
 import React from "react";
 import "./friendsActivity.css";
+
 function AsemilitesActivity(){
   return (
     <div id="parent">
