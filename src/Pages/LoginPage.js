@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Form from "react-bootstrap/Form";
 import Context from "../Context/Context";
 import { useNavigate } from "react-router-dom";
+import APIURL from "../apiEndpoint";
 import "./signUpPage.css";
+
+
 function LoginPage() {
   const { setUser } = useContext(Context);
   let [username, setUsername] = useState("");
@@ -13,7 +14,7 @@ function LoginPage() {
   const navigate = useNavigate();
 
   const sendCredentials = (username, password) => {
-    fetch("http://localhost:8000/users/login", {
+    fetch(`${APIURL}/users/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

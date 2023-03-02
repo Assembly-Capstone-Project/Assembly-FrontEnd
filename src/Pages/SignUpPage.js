@@ -1,12 +1,9 @@
 import React, { useState, useContext } from "react";
-// import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Form from "react-bootstrap/Form";
-// import Button from "react-bootstrap/esm/Button";
-// import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Context from "../Context/Context";
 import "./signUpPage.css";
+import APIURL from "../apiEndpoint";
 
 function SignUpPage() {
   let navigate = useNavigate();
@@ -18,7 +15,7 @@ function SignUpPage() {
 
   const submitForm = async () => {
     try {
-      const result = await fetch("http://localhost:8000/users/register", {
+      const result = await fetch(`${APIURL}/users/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
