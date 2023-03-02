@@ -66,8 +66,10 @@ function AssembleConnect() {
               className="logoCon"
               alt="React Bootstrap logo"
               />
+              <div id="buttonContainer" >
             <button>connect</button>
             <button onClick={()=> deletePost(post.id)} >delete</button>
+              </div>
             <img
               className="img-item"
               src={[post.url[0]]}

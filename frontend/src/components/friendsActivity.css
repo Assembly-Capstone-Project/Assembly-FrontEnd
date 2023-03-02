@@ -1,50 +1,50 @@
-.img-container{
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 110;
-    /* background-image: url('https://wallpapercave.com/wp/wp8144315.jpg'); */
-    /* border: 2px solid green */
+.img-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 110;
+  margin: 0 41px;
 }
-.img-item{
-    height: 250px;
-    width: 370px;
-    margin: 10px;
-    border-radius: 20px;
-    border: 3px solid black
-}
-
-#platform-box{
-    width: 100%;
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* border: 3px solid red; */
+.img-item {
+  height: 250px;
+  width: 370px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 3px solid black;
 }
 
-#parent{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /* border: 2px solid black; */
-    width: 100%;
-    height: 100%;
-    
+#platform-box {
+  width: 100%;
+ 
 }
 
-#title1{
-    color: aliceblue;
-    margin-bottom: 30px;
-    /* border: 2px solid black */
+#parent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#title1 {
+  margin: 10px;
+  font-size: 40px;
+  color: #673fd7;
+  font-family: "Impact", "fantasy";
+  background-image: url("https://e0.pxfuel.com/wallpapers/353/446/desktop-wallpaper-this-pic-i-took-is-pretty-bi-bicolors-bisexual-aesthetic.jpg");
+  width: fit-content;
+  border-radius: 8px;
+  padding: 0 5px;
+  padding-left: 30%;
 }
 
 @media only screen and (min-width: 1560px) {
-    .img-item{
-        height: 250px;
-        width: 290px;
-        margin: 10px;
-        border-radius: 20px;
-        border: 3px solid black
-
-    }
+  .img-item {
+    height: 250px;
+    width: 290px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 3px solid black;
+  }
 }

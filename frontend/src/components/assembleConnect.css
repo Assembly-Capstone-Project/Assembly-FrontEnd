@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  /* margin-left: 100px; */
 }
 
 #postContainer button {
@@ -38,21 +37,14 @@
 }
 #header {
   display: inline-block;
-
-  /* background-image: linear-gradient(
-    92.88deg,
-    #455eb5 9.16%,
-    #5643cc 43.89%,
-    #673fd7 64.72%
-  ); */
-  background-image: url("https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg");
   background-size: cover;
-  /* background: rgba(255,255,255, 0.1); */
-  /* background-color: #ffffff; */
-  /* opacity: 0.5; */
+  background-image: url("https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg");
   margin-top: 50px;
   border-radius: 40px;
-  /* width: max-content; */
+}
+#buttonContainer {
+  display: flex;
+  flex-direction: column;
 }
 #tags {
   width: 190px;
@@ -66,33 +58,26 @@
   padding-left: 0px;
 }
 
-/* #taglist h4 {
-  color:#673fd7;
-  font-family: "Trebuchet MS", "sans-serif";
-  background-color: #ffffff;
-  border-radius: 15px;
-} */
-
 #postHeader {
-  /* color:#455eb5  */
   color: #673fd7;
-  /* border: 3px solid black; */
   font-family: "Impact", "fantasy";
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* text-decoration: underline; */
+  background-image: url("https://i.pinimg.com/736x/98/2d/aa/982daa76a2deebfd8a2b8e784b5707c7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  width: fit-content;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 1559px) {
-  #header{
+  #header {
     width: 750px;
   }
   #postparent {
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; */
-    /* border: 1px solid red; */
-    /* width: 750px; */
+   
   }
   #postContainer {
     display: flex;
@@ -105,11 +90,10 @@
 }
 
 @media (max-width: 395px) {
-  #header{
+  #header {
     width: 350px;
-
   }
-  .logoCon{
+  .logoCon {
     width: 200px;
     height: 200px;
   }
@@ -119,17 +103,12 @@
     margin: 10px;
     border-radius: 20px;
     border: 3px solid black;
-}
-#postHeader{
-  font-size: 20px
-}
+  }
+  #postHeader {
+    font-size: 20px;
+  }
   #postparent {
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; */
-    /* border: 1px solid red; */
-    /* width: 750px; */
+    
   }
   #postContainer {
     display: flex;
@@ -137,6 +116,5 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    /* width: 750px; */
   }
 }

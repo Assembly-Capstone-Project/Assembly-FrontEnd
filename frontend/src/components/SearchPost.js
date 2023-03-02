@@ -14,10 +14,11 @@ function SearchPost() {
 
   return (
     <div className="main">
-      <h2>Assemble Other Players</h2>
       <div className="search">
+      <h2 id="PostTitle">Assemble Other Players</h2>
         <TextField
           id="outlined-basic"
+          className="outlined-basic"
           onChange={inputHandler}
           variant="outlined"
           fullWidth
