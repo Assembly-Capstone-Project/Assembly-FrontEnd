@@ -201,9 +201,9 @@ body {
 }
 
 .landing-hero {
-  margin-top: 60px;
   display: flex;
   justify-content: space-evenly;
+  padding: 10px;
   padding-top: 100px;
 }
 
