@@ -1,12 +1,14 @@
-#gameContainer{
-    display: flex;
-    justify-content: center;
-    /* border: 2px solid pink; */
+#gameContainer {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid pink; */
 }
-img{
-    height: 250px;
-    width: 370px;
-    margin: 10px;
-    border-radius: 20px;
-    
+img {
+  height: 250px;
+  width: 370px;
+  margin: 10px;
+  border-radius: 20px;
+}
+.headers{
+  color: white;
 }
