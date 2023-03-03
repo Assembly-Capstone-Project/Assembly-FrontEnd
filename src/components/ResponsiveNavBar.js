@@ -37,7 +37,7 @@ function ResNavbar() {
         <a href="/gamesPage">Games</a>
         {/* <a href="/friendsList">Friends</a> */}
         <a href="/FavoritesPage">Favorites</a>
-        <a onClick={logout} href="/">logout</a>
+        <a onClick={logout} href="/">Logout</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

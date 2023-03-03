@@ -57,6 +57,7 @@ function FavoritesPage() {
             <img src={game.imgUrl} alt={game.imgAlt} />
             {/* <h3>{game.title}</h3> */}
             <button onClick={() => removeFavorite(index)}>Delete</button>
+            <p></p>
           </div>
         ))}
       </div>
