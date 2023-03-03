@@ -1,0 +1,10 @@
+.game-container {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.game-container img{
+    border: 4px solid black;
+}
+

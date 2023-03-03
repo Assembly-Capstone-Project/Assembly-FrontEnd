@@ -30,7 +30,7 @@
 /* } */ 
 
 .search {
-  width: 30%;
+  /* width: 30; */
   border: 3px solid #673fd7;;
   color: #673fd7;
   background-color: white;
@@ -97,4 +97,43 @@ ul li:active:after {
   margin: 0;
   opacity: 1;
   transition: 0s
+}
+
+@media (max-width: 415px) {
+  .search {
+    /* width: 30%; */
+    border: 3px solid #673fd7;
+    color: #673fd7;
+    background-color: white;
+    border-radius: 8px;
+    font-family: "Impact", "fantasy";
+  }
+
+  #PostTitle {
+    margin: 10px;
+    font-size: 13px;
+    color: #673fd7;
+    font-family: "Impact", "fantasy";
+    background-color: white;
+    /* background-image: url(https://e0.pxfuel.com/wallpapers/353/446/desktop-wallpaper-this-pic-i-took-is-pretty-bi-bicolors-bisexual-aesthetic.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px;
+    border-radius: 8px;
+    padding: 0 5px;
+  }
+
+  .main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    row-gap: 20px;
+    background-image: url("https://e0.pxfuel.com/wallpapers/353/446/desktop-wallpaper-this-pic-i-took-is-pretty-bi-bicolors-bisexual-aesthetic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 30px;
+  }
+
 }
