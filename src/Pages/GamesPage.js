@@ -13,21 +13,20 @@ function GamesPage() {
 
   const fetchGames = async () => {
     //dont need body because its a get request
-    // if (token) {
+    if (token) {
       const result = await fetch(`${APIURL}/games`, {
         method: "GET",
-        // headers: {
-        //   Authorization: `Bearer ${token}`,
-        // },
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
       const json = await result.json();
       setGames(json);
-    // } else {
-    //   setErrorMessage(
-    //     <h1 style={{ color: "white" }}>You're Not Signed In.</h1>
-    //   );
-    // }
-    
+    } else {
+      setErrorMessage(
+        <h1 style={{ color: "white" }}>You're Not Signed In.</h1>
+      );
+    }
   };
   useEffect(() => {
     fetchGames();
